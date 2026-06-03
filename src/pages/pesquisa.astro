@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { researchAreas, researchPrograms } from "../data/site";
+---
+
+<BaseLayout
+  title="Pesquisa"
+  active="/pesquisa/"
+  description="Linhas de pesquisa de Rafael Cardoso Sampaio em democracia digital, comunicação política, IA e métodos."
+>
+  <main>
+    <PageHero
+      eyebrow="Agenda de pesquisa"
+      title="Democracia, tecnologia e evidências em circulação."
+      text="As linhas de investigação se organizam em torno de problemas públicos: participação, deliberação, campanhas, inteligência artificial, governo aberto e qualidade metodológica."
+    />
+
+    <section class="feature-grid">
+      {researchPrograms.map((program) => (
+        <article class="feature-card">
+          <h2>{program.title}</h2>
+          <p>{program.text}</p>
+        </article>
+      ))}
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Áreas de atuação.</h2>
+        <p>Um mapa compacto dos temas que orientam projetos, orientações, publicações e parcerias.</p>
+      </div>
+      <div class="tag-row">
+        {researchAreas.map((area) => <span>{area}</span>)}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,15 @@
+---
+import { featuredPublications } from "../data/site";
+---
+
+<ol class="publication-list">
+  {featuredPublications.map((item) => (
+    <li>
+      <time>{item.year}</time>
+      <div>
+        <h2>{item.title}</h2>
+        <p>{item.venue}</p>
+      </div>
+    </li>
+  ))}
+</ol>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { partnerships } from "../data/site";
+---
+
+<BaseLayout
+  title="Consultoria"
+  active="/consultoria/"
+  description="Consultorias, parcerias e impacto público em democracia digital, IA, governança e comunicação política."
+>
+  <main>
+    <PageHero
+      eyebrow="Impacto e parcerias"
+      title="Pesquisa aplicada para instituições que lidam com tecnologia e democracia."
+      text="A atuação em consultoria é apresentada como colaboração qualificada: diagnóstico, desenho de pesquisa, avaliação, evidências e interpretação de fenômenos políticos digitais."
+    />
+
+    <section class="feature-grid">
+      <article class="feature-card">
+        <h2>Governança democrática</h2>
+        <p>Leitura de políticas, plataformas, práticas institucionais e arranjos de participação, transparência e accountability.</p>
+      </article>
+      <article class="feature-card">
+        <h2>IA e setor público</h2>
+        <p>Análise de usos, riscos, possibilidades e regulação de sistemas de inteligência artificial em ambientes públicos.</p>
+      </article>
+      <article class="feature-card">
+        <h2>Comunicação política</h2>
+        <p>Estudos sobre campanhas digitais, redes sociais, opinião pública, desinformação e circulação de argumentos.</p>
+      </article>
+      <article class="feature-card">
+        <h2>Métodos e evidências</h2>
+        <p>Desenho de pesquisa, análise de conteúdo, revisões, mapeamentos e sínteses para decisões orientadas por evidências.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Instituições e redes.</h2>
+        <p>Experiência em projetos e assessorias com organismos internacionais, instituições públicas, laboratórios e sociedade civil.</p>
+      </div>
+      <div class="tag-row">
+        {partnerships.map((item) => <span>{item}</span>)}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

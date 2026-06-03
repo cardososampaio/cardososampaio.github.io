@@ -1,0 +1,93 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PublicationList from "../components/PublicationList.astro";
+import { profile, researchAreas, researchPrograms } from "../data/site";
+
+const assetBase = import.meta.env.BASE_URL;
+const scholarImage = `url("${assetBase}assets/google-scholar-impact.webp")`;
+const withBase = (href: string) => href === "/" ? assetBase : `${assetBase}${href.replace(/^\//, "")}`;
+---
+
+<BaseLayout active="/">
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">{profile.shortRole}</p>
+        <h1>Um arquivo vivo de pesquisa pública.</h1>
+        <p class="hero-copy">
+          {profile.role}, bolsista de produtividade CNPq 1D e pesquisador de democracia digital,
+          comunicação política, inteligência artificial e métodos qualitativos.
+        </p>
+        <div class="cta-row">
+          <a class="button primary" href={withBase("/publicacoes/")}>Publicações selecionadas</a>
+          <a class="button" href={withBase("/consultoria/")}>Consultoria e impacto</a>
+        </div>
+        <div class="tag-row" aria-label="Áreas de pesquisa">
+          {researchAreas.map((area) => <span>{area}</span>)}
+        </div>
+      </div>
+      <aside class="profile-card">
+        <img src={`${assetBase}assets/rafa-profile.webp`} alt="Retrato de Rafael Cardoso Sampaio" width="896" height="1152" />
+        <div class="profile-meta">
+          <div>
+            <strong>COMPADD / INCT Participa</strong><br />
+            <span>Laboratório público de pesquisa e evidências</span>
+          </div>
+          <div class="chip">UFPE</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="ribbon" aria-label="Destaques">
+      <article>
+        <h2>Pesquisa</h2>
+        <p>Democracia digital, IA, participação, governo aberto, campanhas e campo científico.</p>
+      </article>
+      <article>
+        <h2>Ensino</h2>
+        <p>Materiais, manuais e formação de pesquisadores em métodos e política digital.</p>
+      </article>
+      <article class="scholar-card" style={`--scholar-image: ${scholarImage}`}>
+        <h2>Scholar</h2>
+        <p>Impacto acadêmico apresentado de forma discreta, com link para o perfil completo.</p>
+      </article>
+      <article>
+        <h2>Parcerias</h2>
+        <p>Consultorias e colaborações com setor público, organizações internacionais e sociedade civil.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Pesquisa como infraestrutura pública.</h2>
+        <p>
+          O site organiza uma trajetória que cruza ciência política, comunicação e tecnologias digitais,
+          com atenção a evidências, métodos e consequências democráticas.
+        </p>
+      </div>
+      <div class="feature-grid">
+        {researchPrograms.map((program) => (
+          <article class="feature-card">
+            <h2>{program.title}</h2>
+            <p>{program.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Publicações selecionadas.</h2>
+        <p>
+          Uma curadoria inicial de artigos recentes e agendas consolidadas. A lista completa permanece
+          acessível pelo Lattes e pelo Google Scholar.
+        </p>
+      </div>
+      <PublicationList />
+      <div class="cta-row">
+        <a class="button primary" href={profile.scholarUrl}>Abrir Google Scholar</a>
+        <a class="button" href={profile.lattesUrl}>Ver currículo Lattes</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

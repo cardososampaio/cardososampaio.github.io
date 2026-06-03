@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import PublicationList from "../components/PublicationList.astro";
+import { books, profile } from "../data/site";
+---
+
+<BaseLayout
+  title="Publicações"
+  active="/publicacoes/"
+  description="Publicações selecionadas, livros e manuais de Rafael Cardoso Sampaio."
+>
+  <main>
+    <PageHero
+      eyebrow="Produção acadêmica"
+      title="Artigos, livros e manuais para pesquisa em política digital."
+      text="Esta página privilegia uma curadoria de trabalhos recentes e materiais de referência. A produção completa deve ser consultada no Lattes e no Google Scholar."
+    />
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Artigos selecionados.</h2>
+        <p>Uma lista inicial para orientar leitores, estudantes, jornalistas e pesquisadores interessados nas agendas centrais.</p>
+      </div>
+      <PublicationList />
+    </section>
+
+    <section class="split-grid">
+      <div>
+        <h2>Livros e manuais</h2>
+        <p class="body-copy">Materiais de formação, pesquisa aplicada e orientação metodológica.</p>
+      </div>
+      <ul class="list-clean">
+        {books.map((book) => <li>{book}</li>)}
+      </ul>
+    </section>
+
+    <div class="cta-row">
+      <a class="button primary" href={profile.scholarUrl}>Google Scholar</a>
+      <a class="button" href={profile.lattesUrl}>Currículo Lattes</a>
+      <a class="button" href={profile.orcidUrl}>ORCID</a>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+import { navItems, profile } from "../data/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+  active?: string;
+}
+
+const {
+  title = profile.name,
+  description = profile.description,
+  active = "",
+} = Astro.props;
+const pageTitle = title === profile.name ? title : `${title} | ${profile.name}`;
+const base = import.meta.env.BASE_URL;
+const withBase = (href: string) => href === "/" ? base : `${base}${href.replace(/^\//, "")}`;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={`${base}assets/rafa-profile.webp`} />
+    <meta name="theme-color" content="#16495b" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand-mark" href={base} aria-label="Página inicial">
+          <span>RCS</span>
+          <small>Laboratório público</small>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          {navItems.map((item) => (
+            <a href={withBase(item.href)} aria-current={active === item.href ? "page" : undefined}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </header>
+      <slot />
+      <footer class="site-footer">
+        <div>
+          <strong>{profile.name}</strong>
+          <p>{profile.role}. Democracia digital, comunicação política, IA e métodos de pesquisa.</p>
+        </div>
+        <div class="footer-links">
+          <a href={profile.lattesUrl}>Lattes</a>
+          <a href={profile.orcidUrl}>ORCID</a>
+          <a href={profile.scholarUrl}>Scholar</a>
+          <a href={profile.linkedinUrl}>LinkedIn</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
