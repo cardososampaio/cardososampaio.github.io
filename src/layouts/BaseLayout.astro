@@ -36,8 +36,8 @@ const withBase = (href: string) => href === "/" ? base : `${base}${href.replace(
     <div class="site-shell">
       <header class="site-header">
         <a class="brand-mark" href={base} aria-label="Página inicial">
-          <span>RCS</span>
-          <small>Laboratório público</small>
+          <span>Rafael Cardoso Sampaio</span>
+          <small>Comunicação Política, Democracia Digital, inteligência artificial e métodos qualitativos</small>
         </a>
         <nav class="site-nav" aria-label="Navegação principal">
           {navItems.map((item) => (
@@ -51,9 +51,11 @@ const withBase = (href: string) => href === "/" ? base : `${base}${href.replace(
       <footer class="site-footer">
         <div>
           <strong>{profile.name}</strong>
-          <p>{profile.role}. Democracia digital, comunicação política, IA e métodos de pesquisa.</p>
+          <p>{profile.role}. Pesquisa em democracia digital, comunicação política, inteligência artificial e métodos.</p>
         </div>
         <div class="footer-links">
+          <a href={`mailto:${profile.email}`}>Email</a>
+          <a href={profile.xUrl}>X</a>
           <a href={profile.lattesUrl}>Lattes</a>
           <a href={profile.orcidUrl}>ORCID</a>
           <a href={profile.scholarUrl}>Scholar</a>

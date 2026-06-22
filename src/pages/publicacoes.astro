@@ -2,37 +2,68 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
 import PublicationList from "../components/PublicationList.astro";
-import { books, profile } from "../data/site";
+import { articles, books, chapters, profile } from "../data/site";
+import { olderArticles } from "../data/olderArticles";
+
+const totalArticles = articles.length + olderArticles.length;
 ---
 
 <BaseLayout
   title="Publicações"
   active="/publicacoes/"
-  description="Publicações selecionadas, livros e manuais de Rafael Cardoso Sampaio."
+  description="Artigos recentes, livros e capítulos de Rafael Cardoso Sampaio."
 >
   <main>
     <PageHero
       eyebrow="Produção acadêmica"
-      title="Artigos, livros e manuais para pesquisa em política digital."
-      text="Esta página privilegia uma curadoria de trabalhos recentes e materiais de referência. A produção completa deve ser consultada no Lattes e no Google Scholar."
+      title="Artigos, livros e capítulos."
+      text="Esta página reúne os artigos de Rafael Sampaio, além de livros e capítulos registrados no currículo Lattes."
     />
 
-    <section class="section">
-      <div class="section-header">
-        <h2>Artigos selecionados.</h2>
-        <p>Uma lista inicial para orientar leitores, estudantes, jornalistas e pesquisadores interessados nas agendas centrais.</p>
-      </div>
-      <PublicationList />
-    </section>
+    <section class="section publication-accordion" aria-label="Listas de publicações">
+      <details class="accordion-panel" open>
+        <summary>
+          <span>Artigos</span>
+          <small>{totalArticles} publicações</small>
+        </summary>
+        <div class="accordion-copy">
+          <p>Referências em formato ABNT resumido. Os artigos desde 2021 aparecem primeiro; os anteriores ficam em uma seção recolhível.</p>
+        </div>
+        <div class="subsection-label">
+          <h2>Desde 2021</h2>
+          <span>{articles.length} publicações</span>
+        </div>
+        <PublicationList items={articles} />
+        <details class="sub-accordion-panel">
+          <summary>
+            <span>Artigos anteriores a 2021</span>
+            <small>{olderArticles.length} publicações</small>
+          </summary>
+          <PublicationList items={olderArticles} />
+        </details>
+      </details>
 
-    <section class="split-grid">
-      <div>
-        <h2>Livros e manuais</h2>
-        <p class="body-copy">Materiais de formação, pesquisa aplicada e orientação metodológica.</p>
-      </div>
-      <ul class="list-clean">
-        {books.map((book) => <li>{book}</li>)}
-      </ul>
+      <details class="accordion-panel">
+        <summary>
+          <span>Livros</span>
+          <small>{books.length} publicações</small>
+        </summary>
+        <div class="accordion-copy">
+          <p>Livros, manuais e e-books de pesquisa, formação metodológica e democracia digital.</p>
+        </div>
+        <PublicationList items={books} />
+      </details>
+
+      <details class="accordion-panel">
+        <summary>
+          <span>Capítulos</span>
+          <small>{chapters.length} publicações</small>
+        </summary>
+        <div class="accordion-copy">
+          <p>Capítulos de livros e verbetes acadêmicos organizados em ordem cronológica reversa.</p>
+        </div>
+        <PublicationList items={chapters} />
+      </details>
     </section>
 
     <div class="cta-row">
