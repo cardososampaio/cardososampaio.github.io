@@ -86,8 +86,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
-  padding: 22px clamp(18px, 2.5vw, 34px) 18px;
+  gap: 18px;
+  padding: 18px clamp(14px, 2vw, 28px) 16px;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -99,12 +99,13 @@ img {
 .brand-mark {
   display: grid;
   gap: 2px;
-  min-width: min(420px, 46vw);
+  flex-shrink: 0;
+  max-width: min(300px, 32vw);
 }
 
 .brand-mark span {
   color: var(--cyan);
-  font-size: clamp(24px, 2.4vw, 34px);
+  font-size: clamp(20px, 2vw, 28px);
   font-weight: 950;
   letter-spacing: 0;
   line-height: 1.02;
@@ -112,16 +113,21 @@ img {
 
 .brand-mark small {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .site-nav {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-end;
-  gap: 14px;
+  gap: 10px;
   color: var(--muted);
-  font-size: clamp(16px, 1.35vw, 18px);
+  font-size: clamp(13px, 1.15vw, 16px);
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .site-nav a {
@@ -675,8 +681,8 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
   }
-  .brand-mark { min-width: 0; }
-  .site-nav { justify-content: flex-start; }
+  .brand-mark { min-width: 0; max-width: none; }
+  .site-nav { justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .hero,
   .section-header,
   .split-grid,
