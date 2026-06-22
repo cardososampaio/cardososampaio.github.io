@@ -86,8 +86,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 18px clamp(14px, 2vw, 28px) 16px;
+  gap: 14px;
+  padding: 16px clamp(12px, 1.8vw, 24px) 14px;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -100,12 +100,12 @@ img {
   display: grid;
   gap: 2px;
   flex-shrink: 0;
-  max-width: min(300px, 32vw);
+  max-width: min(260px, 28vw);
 }
 
 .brand-mark span {
   color: var(--cyan);
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: clamp(18px, 1.8vw, 26px);
   font-weight: 950;
   letter-spacing: 0;
   line-height: 1.02;
@@ -123,9 +123,9 @@ img {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 8px;
   color: var(--muted);
-  font-size: clamp(13px, 1.15vw, 16px);
+  font-size: clamp(12px, 1vw, 15px);
   white-space: nowrap;
   overflow: hidden;
 }

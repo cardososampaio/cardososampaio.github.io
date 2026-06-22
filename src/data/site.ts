@@ -19,6 +19,7 @@ export const navItems = [
   { href: "/ensino/", label: "Ensino" },
   { href: "/consultoria/", label: "Consultoria" },
   { href: "/ferramentas/", label: "Ferramentas" },
+  { href: "/ia-servico-publico/", label: "IA serviço público" },
   { href: "/sobre/", label: "Sobre" },
   { href: "/contato/", label: "Contato" },
 ];
