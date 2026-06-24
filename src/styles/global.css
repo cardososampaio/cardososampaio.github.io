@@ -214,6 +214,10 @@ h1 {
   margin-top: 0;
 }
 
+.lead-cv + .lead-cv {
+  margin-top: 18px;
+}
+
 .cta-row {
   display: flex;
   flex-wrap: wrap;

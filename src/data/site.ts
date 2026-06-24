@@ -22,7 +22,6 @@ export const navItems = [
   { href: "/consultoria/", label: "Consultoria" },
   { href: "/ferramentas/", label: "Ferramentas" },
   { href: "/ia-servico-publico/", label: "IA serviço público" },
-  { href: "/sobre/", label: "Sobre" },
   { href: "/contato/", label: "Contato" },
 ];
 
