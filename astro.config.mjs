@@ -1,0 +1,9 @@
+import { defineConfig } from "astro/config";
+
+export default defineConfig({
+  base: process.env.BASE_PATH || "/",
+  output: "static",
+  build: {
+    assets: "assets",
+  },
+});

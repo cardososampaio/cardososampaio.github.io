@@ -1,0 +1,1762 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="IA serviço público"
+  active="/ia-servico-publico/"
+  description="Kit de IA Generativa para o Servidor Público Brasileiro: guias oficiais, cursos, trilhas, segurança e referências."
+>
+  <main class="kit-ia">
+    <div class="kit-page">
+      <header class="kit-header">
+        <div class="kicker">Curadoria &amp; Guia de Recursos Práticos</div>
+        <h1>Kit de IA Generativa para o Servidor Público</h1>
+        <p>Um compêndio de recursos práticos, oficiais e selecionados para capacitação, ética e segurança no uso de inteligência artificial aplicada ao setor público brasileiro.</p>
+        <div class="meta">
+          <span class="pill">
+            <svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Curadores: Rafael Cardoso Sampaio, Gabriela Lotta e Dalson Figueiredo
+          </span>
+          <span class="pill">
+            <svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Documento: HTML Interativo
+          </span>
+          <span class="pill">
+            <svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Versão: Maio de 2026
+          </span>
+        </div>
+      </header>
+
+      <nav class="kit-nav">
+        <a href="#apresentacao">Apresentação</a>
+        <a href="#guias">Guias Oficiais</a>
+        <a href="#cursos">Cursos &amp; Trilhas</a>
+        <a href="#liia">LIIA Hub</a>
+        <a href="#seguranca">Segurança &amp; Diretrizes</a>
+        <a href="#checklist">Checklist Prático</a>
+        <a href="#biblioteca">Referências Online</a>
+        <a href="#autor">Contato</a>
+
+        <div class="nav-search">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="searchInput" placeholder="Buscar no kit..." onkeyup="filterContent()">
+        </div>
+      </nav>
+
+      <section id="apresentacao" class="searchable">
+        <h2>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          1. Apresentação: O Desafio da Inteligência Artificial
+        </h2>
+        <div class="section-intro">
+          A inteligência artificial generativa (IAG) representa uma das transformações mais disruptivas no cotidiano da administração pública brasileira. Longe de ser apenas um modismo tecnológico ou um mecanismo para substituir a força de trabalho humana, a IA funciona como um catalisador de produtividade e capacidade cognitiva dos servidores públicos, permitindo qualificar a prestação de serviços à sociedade.
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card searchable" style="border-top: 4px solid var(--kit-accent)">
+            <h3>Por que este kit foi elaborado?</h3>
+            <p style="margin-top: 8px">Nos anos de 2025 e 2026, os órgãos governamentais de controle e gestão (como CGU, TCU e MGI) lançaram cartilhas e diretrizes oficiais robustas. No entanto, esses materiais encontram-se dispersos em diferentes portais e repositórios oficiais.</p>
+            <p>Este kit atua como um hub curador e indexado de recursos práticos. O objetivo é facilitar o acesso de gestores, procuradores, assessores e servidores de qualquer esfera a guias de prompts, trilhas de capacitação estruturadas e documentos em um único ponto de consulta.</p>
+          </div>
+
+          <div class="card searchable" style="border-top: 4px solid var(--kit-accent2)">
+            <h3>Princípio da IA no Serviço Público</h3>
+            <p style="margin-top: 8px">A premissa fundamental das diretrizes nacionais é clara: <strong>a inteligência é artificial, mas o espírito é público</strong>. O uso de algoritmos generativos não isenta o servidor público de suas obrigações de verificação, discricionariedade, legalidade e sigilo de informações.</p>
+            <p>Toda automação deve servir para simplificar fluxos repetitivos, abrindo espaço para que o julgamento e a empatia humana se concentrem nas decisões complexas e no atendimento direto ao cidadão.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="guias" class="searchable">
+        <h2>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          2. Leia Antes de Tudo: Guias Oficiais do Governo
+        </h2>
+        <div class="section-intro">
+          Antes de iniciar qualquer atividade prática ou inscrever-se em cursos, recomenda-se que os servidores leiam as publicações centrais do Governo Federal. Elas estabelecem o arcabouço normativo, as definições básicas e os limites de conformidade aplicados ao contexto público nacional.
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card searchable">
+            <div class="card-header">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <h3>Guia Prático de Prompt e Pesquisa (MGI)</h3>
+            </div>
+            <p>Elaborado pela Secretaria de Governo Digital do Ministério da Gestão e Inovação (MGI) no âmbito do programa AMPLIA. É focado na arte de redigir instruções eficientes (prompts) com exemplos práticos baseados em atividades comuns como elaboração de pareceres, e-mails, ofícios e relatórios.</p>
+            <div style="margin-bottom: 12px">
+              <span class="tag green">Prompting</span>
+              <span class="tag accent">SGD/MGI</span>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.gov.br/governodigital/pt-br/infraestrutura-nacional-de-dados/inteligencia-artificial-1/publicacoes/guia-pratico-de-prompt-e-pesquisa-com-ia-para-servidores-publicos" target="_blank" class="card-link">
+                Acessar no Portal MGI
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="card searchable">
+            <div class="card-header">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <h3>Cartilha de IA Generativa (MGI &amp; Serpro)</h3>
+            </div>
+            <p>Documento seminal desenvolvido pela SGD/MGI em estreita parceria técnica com o Serpro. Oferece definições fundamentais sobre redes neurais e modelos de linguagem. Detalha os cinco grandes riscos (vazamentos, alucinações, vieses, direitos autorais e dependência tecnológica) e traz tabelas de boas práticas.</p>
+            <div style="margin-bottom: 12px">
+              <span class="tag green">Segurança</span>
+              <span class="tag accent">Serpro / MGI</span>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.gov.br/governodigital/pt-br/infraestrutura-nacional-de-dados/inteligencia-artificial-1/ia-generativa-no-servico-publico.pdf" target="_blank" class="card-link">
+                Baixar Cartilha (PDF)
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="card searchable">
+            <div class="card-header">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <h3>Glossário de IA do Governo Digital</h3>
+            </div>
+            <p>Um referencial terminológico elaborado pelo Núcleo de IA do Governo Federal. Visa nivelar o conhecimento técnico, desmistificando verbetes e siglas frequentes (como LLM, Machine Learning, Visão Computacional, e Deepfake), traduzindo conceitos complexos em termos simples para leigos.</p>
+            <div style="margin-bottom: 12px">
+              <span class="tag green">Conceitos</span>
+              <span class="tag accent">Núcleo IA</span>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.gov.br/governodigital/pt-br/infraestrutura-nacional-de-dados/inteligencia-artificial-1" target="_blank" class="card-link">
+                Consultar Glossário
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cursos" class="searchable">
+        <h2>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          3. Hub de Cursos Gratuitos e Trilhas de Capacitação
+        </h2>
+        <div class="section-intro">
+          A formação acadêmica em inteligência artificial foi descentralizada em diferentes trilhas institucionais. Abaixo, organizamos a grade de cursos gratuitos e autoinstrucionais (com certificado da EV.G/ENAP, Publius e ENA SC), filtrados por nível de dificuldade pedagógica.
+        </div>
+
+        <div class="tabs-nav">
+          <button class="tab-btn active" onclick="switchTab(event, 'tab-iniciante')">Iniciante</button>
+          <button class="tab-btn" onclick="switchTab(event, 'tab-intermediario')">Intermediário</button>
+          <button class="tab-btn" onclick="switchTab(event, 'tab-avancado')">Avançado</button>
+          <button class="tab-btn" onclick="switchTab(event, 'tab-publius')">Publius &amp; Parcerias</button>
+        </div>
+
+        <div id="tab-iniciante" class="tab-content active">
+          <div class="course-list">
+            <div class="course-item searchable">
+              <div class="course-info">
+                <div class="course-title">Inteligência Artificial para simplificar o dia a dia</div>
+                <div class="course-provider">Escola Nacional de Administração Pública (ENAP)</div>
+              </div>
+              <span class="course-duration">4h</span>
+            </div>
+            <div class="course-item searchable">
+              <div class="course-info">
+                <div class="course-title">Engenharia de Prompt Eficaz para Servidores Públicos</div>
+                <div class="course-provider">Escola Nacional de Administração Pública (ENAP)</div>
+              </div>
+              <span class="course-duration">2h</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-intermediario" class="tab-content">
+          <div class="course-list">
+            <div class="course-item searchable">
+              <div class="course-info">
+                <div class="course-title">Inteligência Artificial no Contexto do Serviço Público</div>
+                <div class="course-provider">Ministério da Fazenda / ENAP</div>
+              </div>
+              <span class="course-duration">20h</span>
+            </div>
+            <div class="course-item searchable">
+              <div class="course-info">
+                <div class="course-title">IA: Aplicações no Governo Federal</div>
+                <div class="course-provider">Serpro / ENAP</div>
+              </div>
+              <span class="course-duration">8h</span>
+            </div>
+            <div class="course-item searchable">
+              <div class="course-info">
+                <div class="course-title">IA para o Setor Público: Fundamentos, Aplicações e Implementação</div>
+                <div class="course-provider">Escola de Administração Pública de Santa Catarina (ENA SC)</div>
+              </div>
+              <span class="course-duration">24h</span>
+            </div>
+            <div class="course-item searchable">
+              <div class="course-info">
+                <div class="course-title">Gestão da Inovação no Setor Público</div>
+                <div class="course-provider">Escola Nacional de Administração Pública (ENAP)</div>
+              </div>
+              <span class="course-duration">20h</span>
+            </div>
+            <div class="course-item searchable">
+              <div class="course-info">
+                <div class="course-title">Automação de Processos através da Tecnologia de RPA</div>
+                <div class="course-provider">Secretaria de Governo Digital (SGD / MGI)</div>
+              </div>
+              <span class="course-duration">25h</span>
+            </div>
+            <div class="course-item searchable">
+              <div class="course-info">
+                <div class="course-title">Capacitação Integrada em Governança de Dados</div>
+                <div class="course-provider">Secretaria de Governo Digital (SGD / MGI)</div>
+              </div>
+              <span class="course-duration">25h</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-avancado" class="tab-content">
+          <div class="grid grid-3">
+            <div class="card searchable" style="border-left: 4px solid var(--kit-accent)">
+              <div class="card-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                <h3>Fundamentos e Aplicações da IA para o Agente Público</h3>
+              </div>
+              <p style="margin-top: 8px">Grande itinerário corporativo projetado pelo Núcleo de IA do Governo Federal. Abrange desde discussões normativas básicas até o desenvolvimento de soluções aplicadas complexas em bases de dados governamentais.</p>
+              <div class="card-footer">
+                <span class="tag green">SGD / MGI</span>
+                <span class="course-duration">112h</span>
+              </div>
+            </div>
+
+            <div class="card searchable" style="border-left: 4px solid var(--kit-warn)">
+              <div class="card-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg>
+                <h3>IA para Otimização de Processos e Automação Inteligente</h3>
+              </div>
+              <p style="margin-top: 8px">Programa lançado em maio de 2026. É segmentado em dois eixos principais: o Eixo 1 de Fundamentos, Ética e Governança (77h) e o Eixo 2 com o laboratório de Aplicações Práticas e Integrações (78h).</p>
+              <div class="card-footer">
+                <span class="tag green">ENAP / LIIA</span>
+                <span class="course-duration">155h</span>
+              </div>
+            </div>
+
+            <div class="card searchable" style="border-left: 4px solid var(--kit-accent2)">
+              <div class="card-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                <h3>IA para Otimização de Processos e Tomada de Decisão</h3>
+              </div>
+              <p style="margin-top: 8px">Curso exclusivo voltado para posições de liderança e direção pública (CNE/FPE). Focado em 4 eixos operacionais: diagnóstico institucional, qualidade de dados, ferramentas diárias e técnicas de suporte à decisão.</p>
+              <div class="card-footer">
+                <span class="tag green">ENAP / LIIA</span>
+                <span class="course-duration">71h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-publius" class="tab-content">
+          <div class="grid grid-2">
+            <div class="card searchable" style="border: 2px solid var(--kit-accent)">
+              <div class="card-header">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <h3>IA Aplicada: Estratégias, Ferramentas e Boas Práticas para o Setor Público</h3>
+              </div>
+              <p style="margin-top: 8px">Desenvolvido pela <strong>Publius — Escola de Altos Estudos</strong>. Autorado pelo <strong>Prof. Dr. Rafael Cardoso Sampaio (UFPR)</strong>. Focado especificamente nas dinâmicas de assessoria, representação parlamentar e cargos do Executivo. Aborda o uso produtivo e ético das ferramentas comerciais (ChatGPT e DeepSeek) para busca legislativa, leitura de documentos extensos e escrita de minutas.</p>
+              <div style="margin-bottom: 12px">
+                <span class="tag green">Publius EAE</span>
+                <span class="tag gold">Gratuito (Certif. Opcional R$18)</span>
+              </div>
+              <div class="card-footer">
+                <a href="https://publiuseae.com.br/cursos/tecnologia-inovacao-gestao-publica/ia-aplicada-estrategias-ferramentas-e-boas-praticas-para-o-setor-publico" target="_blank" class="card-link">
+                  Matricular-se no Curso da Publius
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <span class="course-duration">8h</span>
+              </div>
+            </div>
+
+            <div class="card searchable">
+              <div class="card-header">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <h3>Grade ENAP / LIIA em Parceria com a Apolitical</h3>
+              </div>
+              <p style="margin-top: 8px">Coletânea de micro-cursos rápidos desenvolvidos pela ENAP em cooperação internacional com a renomada plataforma Apolitical, focados em inteligência artificial voltada a governança, políticas sociais e desenvolvimento:</p>
+              <ul style="margin-left: 20px; font-size: 0.88rem; margin-bottom: 16px; color: var(--kit-muted)">
+                <li style="margin-bottom:4px"><strong>Engenharia de prompt para servidores públicos</strong> (Conceitos rápidos de interação)</li>
+                <li style="margin-bottom:4px"><strong>Liderança em IA</strong> (Modelos e impacto) — <a href="https://www.escolavirtual.gov.br/curso/1432" target="_blank" style="color:var(--kit-accent)">[Matrícula EV.G 1432]</a></li>
+                <li style="margin-bottom:4px"><strong>Entenda como IA afeta você e o seu governo</strong> (Panorama geral) — <a href="https://www.escolavirtual.gov.br/curso/1437" target="_blank" style="color:var(--kit-accent)">[Matrícula EV.G 1437]</a></li>
+                <li style="margin-bottom:4px"><strong>IA e Clima: contrapartidas e transformação</strong> (Sustentabilidade e dados)</li>
+                <li style="margin-bottom:4px"><strong>IA e o futuro dos sistemas de saúde</strong> (Aplicações em saúde coletiva)</li>
+              </ul>
+              <div class="card-footer">
+                <span class="tag green">ENAP / Apolitical</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout searchable" style="margin-top: 24px; border-left-color: var(--kit-accent2); background: var(--kit-soft)">
+          <h3 style="margin-bottom: 8px">Esclarecimento Técnico: Qual a diferença entre Cursos Modulares e as Trilhas de IA?</h3>
+          <p>Muitos servidores se confundem com as diversas nomenclaturas disponíveis no Portal EV.G e no Portal do Governo Digital. Há uma distinção clara entre os <strong>Cursos da Escola Virtual (Seção 2.2)</strong> e as <strong>Trilhas de Capacitação do Núcleo de IA (Seção 4.3)</strong>:</p>
+
+          <div class="grid grid-2" style="margin-top: 14px">
+            <div class="card" style="padding: 16px; background: var(--kit-paper)">
+              <h4 style="color: var(--kit-accent)">Cursos Modulares ENAP (EV.G)</h4>
+              <p class="small" style="margin-bottom:0">São <strong>micro-capacitações autoinstrucionais, curtas e pontuais</strong> (de 2h a 25h). Servem para o aprendizado individual e imediato de competências específicas (por exemplo, como redigir prompts básicos ou entender a LGPD no dia a dia). O servidor se matricula de forma autônoma e avança conforme seu tempo livre.</p>
+            </div>
+
+            <div class="card" style="padding: 16px; background: var(--kit-paper)">
+              <h4 style="color: var(--kit-accent2)">Trilhas de Capacitação do Núcleo de IA</h4>
+              <p class="small" style="margin-bottom:0">São <strong>itinerários formativos integrados e estruturados de longo prazo</strong> (de 71h a 155h) geridos pelo Núcleo de IA da SGD/MGI. Elas combinam múltiplos cursos, oficinas e mentorias corporativas. Estão vinculadas a uma política de estado estratégica de governança do Governo Federal, cujo foco é formar 115 mil servidores e entregar 25 soluções corporativas integradas até 2026.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="liia" class="searchable">
+        <h2>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>
+          4. Hub de Inovação LIIA: Laboratório de IA da Enap
+        </h2>
+        <div class="section-intro">
+          O <strong>LIIA</strong> (Laboratório de Inovação em Inteligência Artificial da Enap) atua como a principal usina de desenvolvimento técnico, fomento e debate sobre aplicações éticas de inteligência artificial no setor público brasileiro.
+        </div>
+
+        <p style="margin-bottom: 24px">Sob o slogan <em>"A Inteligência é Artificial. O espírito é Público"</em>, o LIIA centraliza a inovação aberta do executivo federal em quatro grandes frentes:</p>
+
+        <div class="grid grid-4">
+          <div class="card searchable" style="border-top: 3px solid var(--kit-accent)">
+            <h4>Rede TEIA</h4>
+            <p class="small">Comunidade oficial de servidores públicos, técnicos, universidades e startups para co-criação de soluções de IAG e intercâmbio de experiências regulatórias no Brasil.</p>
+          </div>
+
+          <div class="card searchable" style="border-top: 3px solid var(--kit-accent)">
+            <h4>Aceleradores Digitais</h4>
+            <p class="small">Desenvolvido pelo GNova Lab em parceria com o LIIA. Oferece mentorias direcionadas, metodologias ágeis e apoio computacional direto a projetos estratégicos de IA dos ministérios.</p>
+          </div>
+
+          <div class="card searchable" style="border-top: 3px solid var(--kit-accent)">
+            <h4>Hackathons &amp; Datathons</h4>
+            <p class="small">Maratonas intensivas de codificação e análise de dados em que cientistas de dados e programadores desenvolvem soluções e códigos open-source sobre bases públicas.</p>
+          </div>
+
+          <div class="card searchable" style="border-top: 3px solid var(--kit-accent)">
+            <h4>Inovação Aberta</h4>
+            <p class="small">Parcerias estratégicas público-privadas que possibilitam testar novos modelos proprietários e de código aberto aplicados a problemas de infraestrutura ou saúde governamental.</p>
+          </div>
+        </div>
+
+        <div class="callout ok searchable" style="margin-top: 24px">
+          <h4>Conteúdos Digitais e Canais do LIIA</h4>
+          <p>Você pode acessar diretamente a página do laboratório e os repositórios técnicos de conhecimento:</p>
+          <div class="grid grid-4" style="margin-top: 12px">
+            <a href="https://www.enap.gov.br/inovacao/liia/conteudo/programas-e-cursos/" target="_blank" class="card" style="padding: 12px; text-decoration: none; font-weight:700; align-items:center; justify-content:center; text-align:center">
+              <span style="color:var(--kit-accent)">Programas e Cursos</span>
+            </a>
+            <a href="https://www.enap.gov.br/inovacao/liia/conteudo/blog/" target="_blank" class="card" style="padding: 12px; text-decoration: none; font-weight:700; align-items:center; justify-content:center; text-align:center">
+              <span style="color:var(--kit-accent)">Blog do LIIA</span>
+            </a>
+            <a href="https://www.enap.gov.br/inovacao/liia/conteudo/policy-brief/" target="_blank" class="card" style="padding: 12px; text-decoration: none; font-weight:700; align-items:center; justify-content:center; text-align:center">
+              <span style="color:var(--kit-accent)">Policy Briefs Acadêmicos</span>
+            </a>
+            <a href="https://www.enap.gov.br/inovacao/liia/rede-de-inovacao-em-inteligencia-artificial-para-governo/" target="_blank" class="card" style="padding: 12px; text-decoration: none; font-weight:700; align-items:center; justify-content:center; text-align:center">
+              <span style="color:var(--kit-accent)">Participar da Rede TEIA</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="seguranca" class="searchable">
+        <h2>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          5. Segurança, Ética e Boas Práticas: Leituras de Conformidade
+        </h2>
+        <div class="section-intro">
+          O uso de inteligência artificial generativa na administração pública é regido por severas normas de governança, proteção de dados e responsabilidade administrativa. Clique nos títulos abaixo para expandir os detalhes de conformidade.
+        </div>
+
+        <div class="accordion open searchable">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="tag green">CGU</span>
+            <h3>Guia de Uso Responsável de IA — Controladoria-Geral da União</h3>
+            <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <p>Este documento estabelece a base ética para o funcionalismo público:</p>
+            <ul style="margin-left: 20px; font-size: 0.9rem; margin-bottom: 12px">
+              <li><strong>Prevalência humana:</strong> Nenhuma decisão que afete diretamente direitos de cidadãos pode ser exclusivamente automatizada.</li>
+              <li><strong>Responsabilidade individual:</strong> O servidor público responde civil e administrativamente por qualquer incorreção ou dado vazado gerado sob sua tutela.</li>
+              <li><strong>Princípio da publicidade:</strong> Transparência ativa na produção de minutas e peças geradas via IAG.</li>
+            </ul>
+            <a href="https://basedeconhecimento.cgu.gov.br/server/api/core/bitstreams/b5d18ee1-5d85-492c-ab72-43b1f84ccfe1/content" target="_blank" rel="noopener" class="card-link">Acessar Guia Original</a>
+          </div>
+        </div>
+
+        <div class="accordion searchable">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="tag warn">TCU</span>
+            <h3>Diretrizes de IA Generativa — Tribunal de Contas da União</h3>
+            <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <p>Manual robusto do TCU voltado a auditores e gestores da corte:</p>
+            <ul style="margin-left: 20px; font-size: 0.9rem; margin-bottom: 12px">
+              <li><strong>Ambiente seguro (ChatTCU e CopilotTCU):</strong> Diferenciação entre plataformas comerciais e modelos locais instalados em servidores governamentais protegidos.</li>
+              <li><strong>Proibições expressas:</strong> Inserção de chaves de API, credenciais do sistema ou documentos classificados e sigilosos em chats públicos comerciais.</li>
+              <li>Traz um repositório técnico compartilhado de prompts para auditoria, desenvolvimento de códigos e pesquisa legislativa.</li>
+            </ul>
+            <a href="https://portal.tcu.gov.br/publicacoes-institucionais/cartilha-manual-ou-tutorial/guia-de-uso-de-inteligencia-artificial-generativa-no-tribunal-de-contas-da-uniao-tcu" target="_blank" rel="noopener" class="card-link">Acessar Portal do TCU</a>
+          </div>
+        </div>
+
+        <div class="accordion searchable">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="tag green">CGU</span>
+            <h3>Deliberação nº 03/2025 — IA na Atividade de Auditoria Interna</h3>
+            <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <p>Diretriz regulatória específica voltada a Unidades de Auditoria Interna Governamental (UAIG):</p>
+            <p>Rege o uso de inteligência artificial em auditorias fiscais e contábeis. Proíbe a substituição automática das notas e opiniões profissionais do auditor pelo relatório produzido por LLMs. Recomenda a manutenção de logs e trilhas de auditoria das ferramentas utilizadas para auditoria ética e auditável.</p>
+            <a href="https://www.gov.br/cgu/pt-br/assuntos/noticias/2025/09/cgu-publica-deliberacao-sobre-o-uso-responsavel-da-inteligencia-artificial-na-atividade-de-auditoria-interna" target="_blank" class="card-link">Ler Deliberação Oficial</a>
+          </div>
+        </div>
+
+        <div class="accordion searchable">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="tag accent">Núcleo IA</span>
+            <h3>Framework de Autoavaliação de Impacto Ético (AIE)</h3>
+            <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <p>Ferramenta metodológica de autoavaliação antes de implantar soluções de inteligência artificial no governo digital. O sistema avalia o grau de risco (alto, médio, baixo), e gera um plano de mitigação com recomendações técnicas específicas e trilhas de conhecimento indicadas para o time de TI do órgão.</p>
+            <a href="https://www.gov.br/governodigital/pt-br/infraestrutura-nacional-de-dados/inteligencia-artificial-1" target="_blank" class="card-link">Visualizar Framework do Portal</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="aprofundamento" class="searchable">
+        <h2>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          6. Recursos Acadêmicos e Literaturas de Aprofundamento
+        </h2>
+        <div class="section-intro">
+          Se você já dominou os guias oficiais e deseja aprofundar-se metodologicamente em engenharia de prompt avançada ou em pesquisas sobre o impacto da IAG na tomada de decisão governamental.
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card searchable">
+            <div class="card-header">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <h3>Ebook: Prompts de IA para Tomada de Decisão</h3>
+            </div>
+            <p>Livro de autoria de <strong>Rafael Cardoso Sampaio</strong> (UFPR). Um manual que ensina passo a passo o método de estruturar prompts eficientes e seguros (Função, Tarefa, Contexto, Formato), as principais técnicas de prompting (zero-shot, few-shot, cadeia de raciocínio, busca profunda) e reflexões sobre a LGPD no serviço público brasileiro.</p>
+            <div class="card-footer">
+              <a href="https://hotmart.com/pt-br/marketplace/produtos/prompts-de-inteligencia-artificial-para-tomada-de-decisao-no-servico-publico/R105476392O" target="_blank" class="card-link">
+                Visualizar na Hotmart
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="card searchable">
+            <div class="card-header">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <h3>Apostila Esesp: Engenharia de Prompts</h3>
+            </div>
+            <p>Material pedagógico distribuído pela Escola de Serviço Público do Espírito Santo (Esesp). Focado na aplicação imediata das ferramentas generativas gratuitas nas secretarias e órgãos estaduais, fornecendo exemplos comentados de respostas a cidadãos e sumários executivos.</p>
+            <div class="card-footer">
+              <a href="https://esesp.es.gov.br" target="_blank" class="card-link">
+                Acessar Portal Esesp
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="card searchable">
+            <div class="card-header">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              <h3>Trilhas de IA do Núcleo de IA</h3>
+              <span class="tag green" style="font-size:0.68rem">9 Trilhas</span>
+            </div>
+            <p>Conjunto de 9 itinerários oficiais de capacitação do executivo federal para diferentes perfis e funções, tais como analistas de dados de TI, gestores e reguladores. O foco é atingir a meta brasileira de consolidar a formação profissional até 2026.</p>
+            <div class="card-footer">
+              <a href="https://www.gov.br/governodigital/pt-br/infraestrutura-nacional-de-dados/inteligencia-artificial-1" target="_blank" class="card-link">
+                Acessar Trilhas
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="checklist" class="searchable">
+        <h2>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          7. Checklist de Segurança Prática
+        </h2>
+        <div class="section-intro">
+          Antes de copiar qualquer texto e colá-lo na caixa de diálogo de ferramentas como ChatGPT, Claude ou Gemini, atente para as regras obrigatórias de conformidade administrativa. Seus cliques são salvos no navegador.
+        </div>
+
+        <div class="grid grid-2 checklist-container">
+          <div class="checklist-card never">
+            <div class="checklist-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              O que NUNCA fazer
+            </div>
+            <div class="checklist-items">
+              <label class="check-label"><input type="checkbox" id="chk-never-1" onchange="toggleCheck(this)"><span class="custom-checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span><span class="check-text">Usar e-mail institucional para criar contas em plataformas de IAG comerciais externas e gratuitas.</span></label>
+              <label class="check-label"><input type="checkbox" id="chk-never-2" onchange="toggleCheck(this)"><span class="custom-checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span><span class="check-text">Inserir dados pessoais identificáveis de cidadãos (ex: CPF, dados médicos, saldos bancários ou endereços).</span></label>
+              <label class="check-label"><input type="checkbox" id="chk-never-3" onchange="toggleCheck(this)"><span class="custom-checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span><span class="check-text">Inserir minutas de leis confidenciais, termos contratuais sob sigilo de licitação ou dados classificados de segurança.</span></label>
+              <label class="check-label"><input type="checkbox" id="chk-never-4" onchange="toggleCheck(this)"><span class="custom-checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span><span class="check-text">Submeter códigos de programação governamentais sigilosos ou sem o crivo prévio do setor de tecnologia da informação.</span></label>
+              <label class="check-label"><input type="checkbox" id="chk-never-5" onchange="toggleCheck(this)"><span class="custom-checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span><span class="check-text">Utilizar conteúdos ou respostas brutas geradas pela IA em pareceres jurídicos sem detalhada checagem (risco de alucinação de leis).</span></label>
+            </div>
+          </div>
+
+          <div class="checklist-card always">
+            <div class="checklist-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              O que SEMPRE fazer
+            </div>
+            <div class="checklist-items">
+              <label class="check-label"><input type="checkbox" id="chk-always-1" onchange="toggleCheck(this)"><span class="custom-checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span><span class="check-text">Priorizar o uso de ferramentas de IA locais fornecidas institucionalmente pelo seu órgão (ex: ChatTCU).</span></label>
+              <label class="check-label"><input type="checkbox" id="chk-always-2" onchange="toggleCheck(this)"><span class="custom-checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span><span class="check-text">Utilizar dados fictícios, mocks e datasets de teste para experimentar com prompts de programação ou estruturação.</span></label>
+              <label class="check-label"><input type="checkbox" id="chk-always-3" onchange="toggleCheck(this)"><span class="custom-checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span><span class="check-text">Rever criticamente a fundamentação de todas as citações e referências jurisprudenciais listadas nas respostas.</span></label>
+              <label class="check-label"><input type="checkbox" id="chk-always-4" onchange="toggleCheck(this)"><span class="custom-checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span><span class="check-text">Dar publicidade e explicitar no cabeçalho ou notas de rodapé de documentos se ferramentas de IAG foram aplicadas em sua síntese.</span></label>
+              <label class="check-label"><input type="checkbox" id="chk-always-5" onchange="toggleCheck(this)"><span class="custom-checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></span><span class="check-text">Submeter o projeto de adoção de IA da secretaria à análise do comitê jurídico e de TI da sua instituição.</span></label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="biblioteca" class="searchable">
+        <h2>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+          8. Biblioteca comentada de referências online
+        </h2>
+        <div class="section-intro">
+          Esta seção funciona como um mapa de consulta: documentos brasileiros para aplicação imediata, referências internacionais para desenho institucional, publicações recentes de 2026 e uma matriz para decidir quando um material é mais útil.
+        </div>
+
+        <div class="reference-hero searchable">
+          <div class="reference-panel">
+            <h3>Como navegar pela biblioteca</h3>
+            <p>Use os documentos nacionais para regras, linguagem e limites práticos no Brasil. Use os internacionais para comparar governança, auditoria, compras, capacitação e implantação segura. Os materiais de 2026 foram incluídos porque tratam de temas que cresceram rapidamente: força de trabalho preparada para IA, auditoria pública, segurança de código aberto e ferramentas governamentais de detecção de fraude.</p>
+            <div class="metric-strip">
+              <div class="metric"><strong>9</strong><span>Brasil</span></div>
+              <div class="metric"><strong>8</strong><span>Internacional</span></div>
+              <div class="metric"><strong>5</strong><span>Atualização 2026</span></div>
+              <div class="metric"><strong>4</strong><span>Guias de decisão</span></div>
+            </div>
+          </div>
+
+          <div class="reference-panel">
+            <h3>Organograma mínimo de governança</h3>
+            <div class="orgmap">
+              <div class="org-node"><strong>Autoridade institucional</strong><span>Define política, escopo permitido, responsabilização e critérios de transparência.</span></div>
+              <div class="org-branch">
+                <div class="org-node"><strong>Área finalística</strong><span>Escolhe casos de uso e valida qualidade do resultado.</span></div>
+                <div class="org-node"><strong>TI / segurança</strong><span>Avalia dados, fornecedores, logs, integrações e riscos operacionais.</span></div>
+                <div class="org-node"><strong>Jurídico / LGPD</strong><span>Verifica base legal, dados pessoais, sigilo e dever de informação.</span></div>
+              </div>
+              <div class="org-node"><strong>Servidor usuário</strong><span>Usa IA como apoio, mantém revisão humana e responde pelo documento final.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="source-tabs" aria-label="Atalhos da biblioteca">
+          <a href="#referencias-brasil">Brasil</a>
+          <a href="#referencias-internacionais">Internacional</a>
+          <a href="#referencias-2026">Atualização 2026</a>
+          <a href="#recursos-complementares">Complementares</a>
+          <a href="#roteiros-leitura">Roteiros</a>
+        </div>
+
+        <h3 id="referencias-brasil">Brasil: documentos para aplicação direta</h3>
+        <div class="reference-grid">
+          <article class="reference-card featured searchable">
+            <h4>PBIA - versão final</h4>
+            <p>Plano Brasileiro de Inteligência Artificial 2024-2028, versão final publicada pelo MCTI. Referência estratégica para soberania, serviços públicos, capacitação, infraestrutura e governança.</p>
+            <div class="reference-meta"><span class="tag">PDF</span><a href="https://www.gov.br/mcti/pt-br/centrais-de-conteudo/publicacoes-mcti/plano-brasileiro-de-inteligencia-artificial/pbia_mcti_2025.pdf" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>Guia CGU Uso Responsável</h4>
+            <p>Guia da Controladoria-Geral da União sobre uso responsável de IA, com foco em ética, accountability, transparência e cuidado com dados e decisões públicas.</p>
+            <div class="reference-meta"><span class="tag">PDF</span><a href="https://basedeconhecimento.cgu.gov.br/server/api/core/bitstreams/b5d18ee1-5d85-492c-ab72-43b1f84ccfe1/content" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>Guia TCU IA Generativa</h4>
+            <p>Diretrizes do Tribunal de Contas da União para uso seguro e responsável de IA generativa, incluindo ChatTCU, sigilo, revisão humana e registro institucional.</p>
+            <div class="reference-meta"><span class="tag">Portal</span><a href="https://portal.tcu.gov.br/publicacoes-institucionais/cartilha-manual-ou-tutorial/guia-de-uso-de-inteligencia-artificial-generativa-no-tribunal-de-contas-da-uniao-tcu" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>Cartilha IA MGI / Serpro</h4>
+            <p>Material conceitual e prático sobre IA generativa no serviço público, com definições, usos, riscos, boas práticas e referências nacionais e internacionais.</p>
+            <div class="reference-meta"><span class="tag">PDF</span><a href="https://www.gov.br/governodigital/pt-br/infraestrutura-nacional-de-dados/inteligencia-artificial-1/ia-generativa-no-servico-publico.pdf" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>Radar ANPD: IA Generativa</h4>
+            <p>Estudo técnico da ANPD sobre IA generativa, proteção de dados, raspagem, conteúdos sintéticos, compartilhamento de dados e impactos regulatórios.</p>
+            <div class="reference-meta"><span class="tag">PDF</span><a href="https://www.gov.br/anpd/pt-br/centrais-de-conteudo/documentos-tecnicos-orientativos/radar_tecnologico_ia_generativa_anpd.pdf" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>Guia TJDFT</h4>
+            <p>Boas práticas em inteligência artificial generativa no Judiciário, útil para equipes que produzem minutas, sínteses, despachos e análises documentais.</p>
+            <div class="reference-meta"><span class="tag">PDF</span><a href="https://www.tjdft.jus.br/institucional/imprensa/noticias/imagens-e-arquivos-2024/07_guia-boas-praticas.pdf/@@download/file/07_guia%20boas%20pr%C3%A1ticas.pdf" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>Resolução CNJ sobre IA</h4>
+            <p>Referência normativa do Conselho Nacional de Justiça para governança, auditoria, transparência, gestão de risco e uso de IA no Poder Judiciário.</p>
+            <div class="reference-meta"><span class="tag">PDF</span><a href="https://atos.cnj.jus.br/files/original1555302025031467d4517244566.pdf" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>Cartilha ANAC IA</h4>
+            <p>Material da ANAC sobre inteligência artificial, segurança, limites de uso, riscos e orientações de tecnologia para ambientes institucionais.</p>
+            <div class="reference-meta"><span class="tag">Portal</span><a href="https://manuaisti.anac.gov.br/suporte/ia/" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>OAB: recomendação sobre IA</h4>
+            <p>Documento do Conselho Federal da OAB sobre limites éticos, regulatórios e de responsabilidade no uso de inteligência artificial generativa na prática jurídica.</p>
+            <div class="reference-meta"><span class="tag">PDF</span><a href="https://s.oab.org.br/arquivos/2024/11/7160d4fe-9449-4aed-80bc-a2d7ac1f5d2f.pdf" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+        </div>
+
+        <h3 id="referencias-internacionais">Internacional: documentos da pasta com versão online localizada</h3>
+        <div class="reference-grid">
+          <article class="reference-card searchable">
+            <h4>Austrália: Proceed with Caution</h4>
+            <p>Relatório parlamentar sobre uso e governança de sistemas de IA por entidades públicas australianas. Útil para discutir risco institucional, compras e accountability.</p>
+            <div class="reference-meta"><span class="tag">Relatório</span><a href="https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Public_Accounts_and_Audit/PublicsectoruseofAI/Report" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>ANAO: uso de IA generativa pública</h4>
+            <p>Política interna da auditoria nacional australiana sobre plataformas públicas de IA generativa, com foco em sigilo, revisão humana e informações de auditoria.</p>
+            <div class="reference-meta"><span class="tag">PDF</span><a href="https://www.aph.gov.au/-/media/Estimates/fpa/supp2425/14_ANAO_internal_policy_regarding_use_of_AI.pdf" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>DHS GenAI Playbook</h4>
+            <p>Playbook do Department of Homeland Security para implantação de IA generativa no setor público, com pilotos, governança, infraestrutura, métricas e usabilidade.</p>
+            <div class="reference-meta"><span class="tag">PDF</span><a href="https://www.dhs.gov/sites/default/files/2025-01/25_0106_ocio_dhs-playbook-for-public-sector-generative-artificial-intelligence-deployment-508-signed.pdf" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>OECD / UNESCO: G7 toolkit</h4>
+            <p>Toolkit de IA no setor público preparado para o G7, com estruturas de prontidão, governança, infraestrutura, competências e ciclo de vida de projetos de IA.</p>
+            <div class="reference-meta"><span class="tag">PDF</span><a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/10/g7-toolkit-for-artificial-intelligence-in-the-public-sector_f93fb9fb/421c1244-en.pdf" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>DOE GenAI Reference Guide</h4>
+            <p>Guia do Departamento de Energia dos EUA sobre benefícios, riscos, boas práticas e obrigações para desenvolvimento e uso responsável de IA generativa.</p>
+            <div class="reference-meta"><span class="tag">Portal</span><a href="https://www.energy.gov/cio/department-energy-generative-artificial-intelligence-reference-guide" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>JRC: GenAI no setor público europeu</h4>
+            <p>Policy brief da Comissão Europeia sobre uso atual, perguntas-chave e considerações de política pública para IA generativa em administrações públicas.</p>
+            <div class="reference-meta"><span class="tag">JRC</span><a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC139825" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>Conselho da UE: ChatGPT no setor público</h4>
+            <p>Research paper do Analysis and Research Team sobre usos, limites e riscos de LLMs em administrações públicas, incluindo transparência, dependência e accountability.</p>
+            <div class="reference-meta"><span class="tag">UE</span><a href="https://interoperable-europe.ec.europa.eu/collection/public-sector-tech-watch/news/chatgpt-public-sector-overhyped-or-overlooked" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+
+          <article class="reference-card searchable">
+            <h4>World Bank: AI in the Public Sector</h4>
+            <p>Nota de síntese do Banco Mundial sobre oportunidades e riscos de IA em governos, incluindo atendimento, automação, compliance, fraude e desenho de políticas.</p>
+            <div class="reference-meta"><span class="tag">Portal</span><a href="https://documents.worldbank.org/en/publication/documents-reports/documentdetail/746721616045333426/artificial-intelligence-in-the-public-sector-summary-note" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          </article>
+        </div>
+
+        <h3 id="referencias-2026">Atualização 2026: materiais recentes para acompanhar</h3>
+        <div class="update-list">
+          <div class="update-item searchable"><strong>OCDE: força de trabalho pública preparada para IA</strong><p class="small">Policy brief de janeiro de 2026 sobre competências, líderes, especialistas digitais e criação de capacidade interna no governo.</p><a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/building-an-ai-ready-public-workforce_5cf188ee/b89244c7-en.pdf" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          <div class="update-item searchable"><strong>OCDE: IA em auditoria pública</strong><p class="small">Working paper de maio de 2026 sobre uso de IA por instituições superiores de auditoria, com casos de detecção de anomalias e análise documental.</p><a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/05/the-state-of-artificial-intelligence-in-public-audit_35d068d9/f4a6c658-en.pdf" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          <div class="update-item searchable"><strong>GOV.UK: IA, código aberto e vulnerabilidades</strong><p class="small">Orientação de maio de 2026 sobre publicação de código no setor público diante de descoberta de vulnerabilidades acelerada por IA.</p><a href="https://www.gov.uk/guidance/ai-open-code-and-vulnerability-risk-in-the-public-sector" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          <div class="update-item searchable"><strong>GOV.UK: Fraud Risk Assessment Accelerator</strong><p class="small">Ferramenta de IA generativa para apoiar órgãos públicos na identificação e mitigação de riscos de fraude em políticas e programas.</p><a href="https://www.gov.uk/guidance/fraud-risk-assessment-fra-accelerator" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          <div class="update-item searchable"><strong>NLC: IA responsável em governos locais</strong><p class="small">Material de maio de 2026 sobre fórum de IA e tecnologia emergente para governos locais, com foco em capacidade, governança e compras.</p><a href="https://www.nlc.org/article/2026/05/01/how-nlcs-ai-emerging-tech-forum-is-advancing-responsible-ai-in-local-government/" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+          <div class="update-item searchable"><strong>Agentic State</strong><p class="small">Site de acompanhamento e reflexão sobre Estado, governo e transformação institucional em contexto de IA agente.</p><a href="https://agenticstate.org/" target="_blank" rel="noopener" class="card-link">Abrir online</a></div>
+        </div>
+
+        <h3 id="recursos-complementares">Recursos complementares: cursos, playbooks e guias de prompt</h3>
+        <p class="small">Para não transformar a biblioteca em uma sequência excessiva de cards, os materiais complementares foram organizados em tabela. Use esta parte como trilha rápida para capacitação, desenho de políticas e prática de prompts.</p>
+        <div class="resource-table-wrap">
+          <table class="resource-table">
+            <thead>
+              <tr><th>Recurso</th><th>Uso recomendado</th><th>Tipo</th><th>Acesso</th></tr>
+            </thead>
+            <tbody>
+              <tr class="searchable"><td><strong>EV.G: curso 1395</strong></td><td>Capacitação formal para servidores públicos dentro da Escola Virtual de Governo.</td><td><span class="tag">Curso</span></td><td><a href="https://www.escolavirtual.gov.br/curso/1395" target="_blank" rel="noopener" class="card-link">Abrir online</a></td></tr>
+              <tr class="searchable"><td><strong>UK Government AI Playbook</strong></td><td>Referência prática para implantação governamental, com linguagem operacional para equipes públicas.</td><td><span class="tag">Playbook</span></td><td><a href="https://gds.blog.gov.uk/2025/02/10/launching-the-artificial-intelligence-playbook-for-the-uk-government/" target="_blank" rel="noopener" class="card-link">Abrir online</a></td></tr>
+              <tr class="searchable"><td><strong>Merative: AI in the public sector</strong></td><td>Framework sintético para pensar adoção de IA no setor público, riscos e desenho institucional.</td><td><span class="tag">Framework</span></td><td><a href="https://www.merative.com/blog/ai-in-the-public-sector-a-framework" target="_blank" rel="noopener" class="card-link">Abrir online</a></td></tr>
+              <tr class="searchable"><td><strong>InnovateUS: Starting with Curiosity</strong></td><td>Guia introdutório para servidores começarem com perguntas melhores antes de escolher ferramentas.</td><td><span class="tag">Guia</span></td><td><a href="https://innovate-us.org/starting-with-curiosity-a-beginner-s-guide-for-public-servants/" target="_blank" rel="noopener" class="card-link">Abrir online</a></td></tr>
+              <tr class="searchable"><td><strong>UNESCO: civil servants in the AI era</strong></td><td>Material sobre preparação de servidores para a era da IA, competências e transformação institucional.</td><td><span class="tag">Artigo</span></td><td><a href="https://www.unesco.org/en/articles/equipping-civil-servants-ai-era" target="_blank" rel="noopener" class="card-link">Abrir online</a></td></tr>
+              <tr class="searchable"><td><strong>OECD: Governing with Artificial Intelligence</strong></td><td>Referência internacional para governança pública com IA, útil para gestores, controle e desenho de políticas.</td><td><span class="tag">Relatório</span></td><td><a href="https://www.oecd.org/en/publications/governing-with-artificial-intelligence_795de142-en.html" target="_blank" rel="noopener" class="card-link">Abrir online</a></td></tr>
+              <tr class="searchable"><td><strong>Prompting Guide em português</strong></td><td>Guia aberto para aprender conceitos, padrões e técnicas de prompting em português.</td><td><span class="tag">Prompt</span></td><td><a href="https://www.promptingguide.ai/pt" target="_blank" rel="noopener" class="card-link">Abrir online</a></td></tr>
+              <tr class="searchable"><td><strong>Google Workspace: guia de prompts</strong></td><td>Referência rápida para estruturar prompts em tarefas de produtividade, escrita e análise no trabalho.</td><td><span class="tag">Prompt</span></td><td><a href="https://workspace.google.com/learning/content/gps-prompt" target="_blank" rel="noopener" class="card-link">Abrir online</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="roteiros-leitura">Spoilers: roteiros rápidos de leitura</h3>
+        <details class="spoiler searchable">
+          <summary>Tenho 30 minutos e preciso orientar minha equipe</summary>
+          <div class="spoiler-body">
+            <p>Comece pela Cartilha MGI/Serpro para conceitos e boas práticas. Em seguida, use o Guia CGU para princípios de responsabilidade e o Radar ANPD para alertas sobre dados pessoais. Termine com o checklist deste kit.</p>
+          </div>
+        </details>
+        <details class="spoiler searchable">
+          <summary>Vou criar uma política interna de uso de IA</summary>
+          <div class="spoiler-body">
+            <p>Use CGU, TCU e ANPD como base brasileira. Compare com ANAO, DOE e DHS para regras operacionais. Se houver compras, pilotos ou sistemas internos, use OECD/UNESCO, JRC e GOV.UK 2026 para governança e implantação.</p>
+          </div>
+        </details>
+        <details class="spoiler searchable">
+          <summary>Meu órgão quer desenvolver ou contratar uma solução de IA</summary>
+          <div class="spoiler-body">
+            <p>Trate como projeto institucional: defina caso de uso, dados, base legal, métricas, revisão humana, registro, segurança e plano de saída. O DHS Playbook, o G7 Toolkit, o PBIA final e os materiais GOV.UK 2026 são os melhores pontos de partida.</p>
+          </div>
+        </details>
+        <details class="spoiler searchable">
+          <summary>Preciso justificar capacitação de servidores</summary>
+          <div class="spoiler-body">
+            <p>Use o PBIA final para alinhamento estratégico nacional, a OCDE 2026 sobre workforce para argumentar capacidade interna e o Guia MGI/Serpro para traduzir a necessidade em práticas de uso cotidiano.</p>
+          </div>
+        </details>
+      </section>
+
+      <section id="autor" class="footer-section searchable">
+        <div class="bio-container">
+          <div class="bio-text">
+            <h3>Curadores do Kit</h3>
+            <p style="margin-bottom: 12px; font-size: 0.95rem">
+              Este kit foi organizado por <strong>Rafael Cardoso Sampaio</strong>, <strong>Gabriela Lotta</strong> e <strong>Dalson Figueiredo</strong>.
+            </p>
+            <p>
+              Os três curadores lançaram recentemente o livro <strong>Prompts de Inteligência Artificial para tomada de decisão no serviço público</strong>, que reúne aplicações práticas de prompting voltadas ao contexto administrativo, decisório e institucional.
+            </p>
+            <div class="author-links">
+              <div class="author-card">
+                <strong>Rafael Cardoso Sampaio</strong>
+                <a href="mailto:cardososampaio@gmail.com" target="_blank" rel="noopener">Contato</a>
+                <a href="https://x.com/cardososampaio" target="_blank" rel="noopener">X/Twitter</a>
+                <a href="https://www.linkedin.com/in/rafael-cardoso-sampaio-4a8b3822/" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+              <div class="author-card">
+                <strong>Gabriela Lotta</strong>
+                <a href="https://x.com/gabilotta" target="_blank" rel="noopener">X/Twitter</a>
+                <a href="https://www.linkedin.com/in/gabriela-lotta-b3668922/" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+              <div class="author-card">
+                <strong>Dalson Figueiredo</strong>
+                <a href="https://x.com/DalsonFigueired" target="_blank" rel="noopener">X/Twitter</a>
+                <a href="https://www.linkedin.com/in/dalson-figueiredo-bb7a88308/" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </div>
+            <div class="reference-card featured prompt-spotlight" style="margin-top: 20px; min-height: 0;">
+              <h4>Livro recém-lançado</h4>
+              <p><strong>Prompts de Inteligência Artificial para tomada de decisão no serviço público</strong>. Material dos curadores com foco em aplicação prática, rotinas administrativas, análise documental e apoio à tomada de decisão.</p>
+              <div class="reference-meta">
+                <span class="tag">Livro / material</span>
+                <a href="https://hotmart.com/pt-br/marketplace/produtos/prompts-de-inteligencia-artificial-para-tomada-de-decisao-no-servico-publico/R105476392O" target="_blank" rel="noopener" class="card-link">Abrir online</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>Curadoria de Rafael Cardoso Sampaio, Gabriela Lotta e Dalson Figueiredo.</p>
+          <p>Links de cursos, guias e referências online revisados em maio de 2026. Distribuição livre e gratuita.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .kit-ia {
+    --kit-bg: oklch(20% 0.08 219);
+    --kit-paper: oklch(35% 0.11 211);
+    --kit-paper-2: oklch(24% 0.08 215);
+    --kit-ink: oklch(92% 0.04 190);
+    --kit-muted: oklch(77% 0.05 196);
+    --kit-line: oklch(79% 0.10 190 / 0.28);
+    --kit-accent: oklch(79% 0.16 190);
+    --kit-accent-hover: oklch(86% 0.14 190);
+    --kit-accent2: oklch(79% 0.17 74);
+    --kit-risk: oklch(72% 0.22 343);
+    --kit-warn: oklch(79% 0.17 74);
+    --kit-ok: oklch(72% 0.17 145);
+    --kit-soft: oklch(79% 0.16 190 / 0.10);
+    --kit-soft-ok: oklch(72% 0.17 145 / 0.10);
+    --kit-soft-warn: oklch(79% 0.17 74 / 0.10);
+    --kit-soft-risk: oklch(72% 0.22 343 / 0.10);
+    --kit-chip: oklch(92% 0.03 190 / 0.08);
+    --kit-shadow: 0 18px 45px oklch(13% 0.06 215 / 0.5);
+    --kit-shadow-sm: 0 4px 12px oklch(13% 0.06 215 / 0.25);
+    --kit-highlight: oklch(79% 0.16 190 / 0.3);
+    --kit-radius: 8px;
+    color: var(--kit-ink);
+    font-family: Aptos, "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+  }
+
+  .kit-ia .kit-page {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 34px 0 42px;
+  }
+
+  .kit-ia .kit-header {
+    min-height: 360px;
+    display: grid;
+    align-content: end;
+    padding: clamp(38px, 6vw, 72px);
+    border: 1px solid oklch(79% 0.10 190 / 0.22);
+    border-radius: 18px;
+    background:
+      linear-gradient(135deg, oklch(14% 0.06 219 / .96), oklch(29% 0.12 215 / .94) 55%, oklch(35% 0.11 211 / .92)),
+      repeating-linear-gradient(90deg, oklch(92% 0.04 190 / .07) 0 1px, transparent 1px 74px);
+    color: var(--kit-ink);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 22px;
+    isolation: isolate;
+  }
+
+  .kit-ia .kit-header::before {
+    content: "";
+    position: absolute;
+    inset: 24px;
+    border: 1px solid oklch(92% 0.04 190 / .14);
+    border-radius: 14px;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .kit-ia .kit-header::after {
+    content: "";
+    position: absolute;
+    width: 440px;
+    height: 440px;
+    top: -90px;
+    right: -90px;
+    background:
+      linear-gradient(90deg, transparent 48%, oklch(92% 0.04 190 / .13) 49% 51%, transparent 52%),
+      linear-gradient(0deg, transparent 48%, oklch(92% 0.04 190 / .13) 49% 51%, transparent 52%);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(circle, #000 0%, transparent 68%);
+    opacity: .42;
+    pointer-events: none;
+  }
+
+  .kit-ia .kit-header .kicker {
+    font-size: .78rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--kit-accent2);
+    margin-bottom: 8px;
+  }
+
+  .kit-ia .kit-header h1 {
+    max-width: 920px;
+    font-size: clamp(2.35rem, 5vw, 4.65rem);
+    line-height: .98;
+    letter-spacing: -.045em;
+    font-weight: 900;
+    margin: 8px 0 16px;
+    color: var(--kit-ink);
+  }
+
+  .kit-ia .kit-header p {
+    max-width: 780px;
+    color: oklch(88% 0.04 196);
+    font-size: clamp(1rem, 1.8vw, 1.22rem);
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  .kit-ia .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .kit-ia .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px;
+    padding: 6px 12px;
+    background: oklch(92% 0.04 190 / .11);
+    border: 1px solid oklch(92% 0.04 190 / .2);
+    font-size: .82rem;
+    color: oklch(94% 0.04 196);
+    font-weight: 500;
+  }
+
+  .kit-ia .kit-nav {
+    margin: 18px 0 26px;
+    background: var(--kit-paper);
+    border: 1px solid var(--kit-line);
+    border-radius: 14px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    box-shadow: var(--kit-shadow);
+    backdrop-filter: blur(18px);
+    position: sticky;
+    top: 12px;
+    z-index: 100;
+  }
+
+  .kit-ia .kit-nav a {
+    color: var(--kit-accent);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: .82rem;
+    padding: 8px 9px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+
+  .kit-ia .kit-nav a:hover {
+    background: var(--kit-soft);
+    color: var(--kit-accent-hover);
+  }
+
+  .kit-ia .nav-search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 190px;
+  }
+
+  .kit-ia .nav-search input {
+    width: 100%;
+    padding: 6px 12px 6px 28px;
+    font-size: 0.82rem;
+    border: 1px solid var(--kit-line);
+    border-radius: 6px;
+    background: var(--kit-bg);
+    color: var(--kit-ink);
+    font-family: inherit;
+    transition: all 0.2s ease;
+  }
+
+  .kit-ia .nav-search input:focus {
+    outline: none;
+    border-color: var(--kit-accent);
+    background: var(--kit-paper-2);
+    box-shadow: 0 0 0 2px var(--kit-soft);
+  }
+
+  .kit-ia .nav-search svg {
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    height: 16px;
+    color: var(--kit-muted);
+    pointer-events: none;
+  }
+
+  .kit-ia .icon-sm { width: 16px; height: 16px; }
+
+  .kit-ia section {
+    background: var(--kit-paper);
+    border: 1px solid var(--kit-line);
+    border-radius: 16px;
+    margin: 22px 0;
+    padding: clamp(24px, 4vw, 38px);
+    box-shadow: var(--kit-shadow-sm);
+    scroll-margin-top: 70px;
+  }
+
+  .kit-ia section h2 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin: 0 0 12px;
+    font-weight: 800;
+    letter-spacing: -.025em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--kit-ink);
+  }
+
+  .kit-ia section h2 svg {
+    color: var(--kit-accent);
+    flex-shrink: 0;
+    padding: 7px;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: var(--kit-soft);
+  }
+
+  .kit-ia .section-intro {
+    font-size: 1.05rem;
+    color: var(--kit-muted);
+    margin-bottom: 24px;
+    line-height: 1.6;
+    max-width: 920px;
+  }
+
+  .kit-ia section h3 {
+    font-size: 1.15rem;
+    margin: 22px 0 10px;
+    font-weight: 700;
+    color: var(--kit-ink);
+  }
+
+  .kit-ia section h4 {
+    margin: 14px 0 6px;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--kit-ink);
+  }
+
+  .kit-ia section p {
+    margin-bottom: 12px;
+    font-size: 0.94rem;
+    color: oklch(82% 0.04 196);
+  }
+
+  .kit-ia .lead {
+    font-size: 1.12rem;
+    color: var(--kit-ink);
+    font-weight: 500;
+  }
+
+  .kit-ia .small { font-size: 0.85rem; }
+
+  .kit-ia .grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  .kit-ia .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kit-ia .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kit-ia .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+  .kit-ia .card {
+    border: 1px solid var(--kit-line);
+    border-radius: 14px;
+    padding: 20px;
+    background: linear-gradient(180deg, var(--kit-paper), var(--kit-paper-2));
+    transition: all 0.22s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .kit-ia .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 36px oklch(13% 0.06 215 / 0.4);
+    border-color: var(--kit-accent);
+  }
+
+  .kit-ia .card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .kit-ia .card-header svg {
+    color: var(--kit-accent);
+    flex-shrink: 0;
+  }
+
+  .kit-ia .card h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  .kit-ia .card p {
+    font-size: 0.88rem;
+    color: var(--kit-muted);
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+
+  .kit-ia .card-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-top: 1px solid var(--kit-line);
+    padding-top: 12px;
+  }
+
+  .kit-ia .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--kit-accent);
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 8px 12px;
+    background: var(--kit-soft);
+    transition: all 0.15s ease;
+  }
+
+  .kit-ia .card-link:hover {
+    background: oklch(79% 0.16 190 / 0.2);
+    color: var(--kit-accent-hover);
+    text-decoration: none;
+  }
+
+  .kit-ia .callout {
+    border-left: 4px solid var(--kit-accent);
+    background: var(--kit-soft);
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin: 18px 0;
+  }
+
+  .kit-ia .callout h3, .kit-ia .callout h4 { margin-top: 0; }
+
+  .kit-ia .callout.warn { border-color: var(--kit-warn); background: var(--kit-soft-warn); }
+  .kit-ia .callout.risk { border-color: var(--kit-risk); background: var(--kit-soft-risk); }
+  .kit-ia .callout.ok { border-color: var(--kit-ok); background: var(--kit-soft-ok); }
+
+  .kit-ia .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--kit-chip);
+    font-size: .74rem;
+    font-weight: 700;
+    color: var(--kit-muted);
+    margin: 2px 4px 2px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .kit-ia .tag.green { background: var(--kit-soft-ok); color: var(--kit-ok); }
+  .kit-ia .tag.warn { background: var(--kit-soft-warn); color: var(--kit-warn); }
+  .kit-ia .tag.gold { background: var(--kit-soft-warn); color: var(--kit-accent2); }
+  .kit-ia .tag.accent { background: var(--kit-soft); color: var(--kit-accent); }
+
+  .kit-ia .tabs-nav {
+    display: flex;
+    gap: 4px;
+    background: var(--kit-bg);
+    padding: 4px;
+    border-radius: 12px;
+    border: 1px solid var(--kit-line);
+    margin-bottom: 20px;
+  }
+
+  .kit-ia .tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 10px 14px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: var(--kit-muted);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+  }
+
+  .kit-ia .tab-btn:hover { color: var(--kit-ink); }
+
+  .kit-ia .tab-btn.active {
+    background: var(--kit-paper);
+    color: var(--kit-accent);
+    box-shadow: 0 4px 10px oklch(13% 0.06 215 / 0.3);
+  }
+
+  .kit-ia .tab-content { display: none; animation: kitFadeIn 0.25s ease-out; }
+  .kit-ia .tab-content.active { display: block; }
+
+  @keyframes kitFadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .kit-ia .accordion {
+    border: 1px solid var(--kit-line);
+    border-radius: 12px;
+    background: var(--kit-paper);
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+
+  .kit-ia .accordion-header {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    color: var(--kit-ink);
+    gap: 12px;
+  }
+
+  .kit-ia .accordion-header:hover { background: var(--kit-bg); }
+
+  .kit-ia .accordion-header h3 {
+    margin: 0;
+    font-size: 0.98rem;
+    font-weight: 700;
+    flex-grow: 1;
+  }
+
+  .kit-ia .accordion-chevron {
+    transition: transform 0.2s ease;
+    color: var(--kit-muted);
+    flex-shrink: 0;
+  }
+
+  .kit-ia .accordion-body {
+    display: none;
+    padding: 18px 24px 20px;
+    border-top: 1px solid var(--kit-line);
+    background: var(--kit-paper-2);
+  }
+
+  .kit-ia .accordion.open .accordion-body { display: block; }
+  .kit-ia .accordion.open .accordion-chevron { transform: rotate(180deg); }
+
+  .kit-ia .checklist-container { margin-top: 20px; }
+
+  .kit-ia .checklist-card {
+    border: 1px solid var(--kit-line);
+    border-radius: 12px;
+    padding: 24px;
+    background: var(--kit-paper);
+  }
+
+  .kit-ia .checklist-card.never { border-left: 5px solid var(--kit-risk); background: var(--kit-soft-risk); }
+  .kit-ia .checklist-card.always { border-left: 5px solid var(--kit-ok); background: var(--kit-soft-ok); }
+
+  .kit-ia .checklist-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .kit-ia .checklist-card.never .checklist-title { color: var(--kit-risk); }
+  .kit-ia .checklist-card.always .checklist-title { color: var(--kit-ok); }
+
+  .kit-ia .checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .kit-ia .check-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 0.92rem;
+    user-select: none;
+    padding: 4px 0;
+    color: var(--kit-ink);
+  }
+
+  .kit-ia .check-label input { display: none; }
+
+  .kit-ia .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid var(--kit-line);
+    background: var(--kit-paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all 0.2s ease;
+  }
+
+  .kit-ia .checklist-card.never .custom-checkbox { border-color: var(--kit-risk); }
+  .kit-ia .checklist-card.always .custom-checkbox { border-color: var(--kit-ok); }
+
+  .kit-ia .checklist-card.never .check-label input:checked + .custom-checkbox { background: var(--kit-risk); border-color: var(--kit-risk); }
+  .kit-ia .checklist-card.always .check-label input:checked + .custom-checkbox { background: var(--kit-ok); border-color: var(--kit-ok); }
+
+  .kit-ia .custom-checkbox svg {
+    opacity: 0;
+    color: white;
+    transition: opacity 0.2s ease;
+    stroke-width: 4px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .kit-ia .check-label input:checked + .custom-checkbox svg { opacity: 1; }
+
+  .kit-ia .check-text { transition: all 0.2s ease; }
+  .kit-ia .check-label.checked .check-text { text-decoration: line-through; opacity: 0.55; }
+
+  .kit-ia .course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .kit-ia .course-item {
+    background: var(--kit-paper);
+    border: 1px solid var(--kit-line);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    transition: all 0.15s ease;
+  }
+
+  .kit-ia .course-item:hover { border-color: var(--kit-accent); background: var(--kit-bg); }
+
+  .kit-ia .course-info { flex-grow: 1; }
+  .kit-ia .course-title { font-size: 0.94rem; font-weight: 700; color: var(--kit-ink); margin-bottom: 2px; }
+  .kit-ia .course-provider { font-size: 0.8rem; color: var(--kit-muted); font-weight: 500; }
+
+  .kit-ia .course-duration {
+    background: var(--kit-chip);
+    color: var(--kit-ink);
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    flex-shrink: 0;
+  }
+
+  .kit-ia mark.search-highlight {
+    background-color: var(--kit-highlight);
+    color: inherit;
+    padding: 1px 3px;
+    border-radius: 3px;
+  }
+
+  .kit-ia .footer-section {
+    background: var(--kit-paper);
+    border: 1px solid var(--kit-line);
+    border-radius: 16px;
+    padding: 32px;
+    margin-top: 32px;
+    box-shadow: var(--kit-shadow-sm);
+  }
+
+  .kit-ia .bio-container { display: grid; grid-template-columns: 1fr; gap: 28px; }
+
+  .kit-ia .bio-text h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: 800;
+    color: var(--kit-accent);
+  }
+
+  .kit-ia .bio-text p {
+    font-size: 0.92rem;
+    color: var(--kit-muted);
+    line-height: 1.65;
+  }
+
+  .kit-ia .author-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .kit-ia .author-card {
+    border: 1px solid var(--kit-line);
+    border-radius: 14px;
+    padding: 14px;
+    background: var(--kit-bg);
+  }
+
+  .kit-ia .author-card strong { display: block; color: var(--kit-ink); margin-bottom: 8px; }
+  .kit-ia .author-card a {
+    display: inline-flex;
+    margin-right: 8px;
+    margin-top: 4px;
+    color: var(--kit-accent);
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .kit-ia .reference-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+    gap: 24px;
+    align-items: stretch;
+    margin: 24px 0;
+  }
+
+  .kit-ia .reference-panel {
+    border: 1px solid var(--kit-line);
+    border-radius: 18px;
+    padding: 24px;
+    background:
+      linear-gradient(135deg, var(--kit-paper-2), var(--kit-paper)),
+      repeating-linear-gradient(90deg, oklch(79% 0.16 190 / .08) 0 1px, transparent 1px 34px);
+  }
+
+  .kit-ia .reference-panel h3 { margin-top: 0; font-size: 1.25rem; color: var(--kit-ink); }
+
+  .kit-ia .metric-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .kit-ia .metric {
+    border: 1px solid oklch(79% 0.16 190 / .16);
+    border-radius: 14px;
+    padding: 14px;
+    background: oklch(92% 0.04 190 / .05);
+  }
+
+  .kit-ia .metric strong { display: block; font-size: 1.55rem; line-height: 1; color: var(--kit-accent); }
+  .kit-ia .metric span { display: block; margin-top: 5px; color: var(--kit-muted); font-size: .78rem; font-weight: 700; text-transform: uppercase; }
+
+  .kit-ia .orgmap { display: grid; gap: 10px; }
+  .kit-ia .org-node { border: 1px solid var(--kit-line); border-radius: 14px; padding: 14px; background: var(--kit-bg); }
+  .kit-ia .org-node strong { display: block; color: var(--kit-ink); margin-bottom: 4px; }
+  .kit-ia .org-node span { color: var(--kit-muted); font-size: .86rem; }
+
+  .kit-ia .org-branch { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+
+  .kit-ia .source-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px 0 16px;
+  }
+
+  .kit-ia .source-tabs a {
+    color: var(--kit-accent);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: .82rem;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--kit-chip);
+    border: 1px solid var(--kit-line);
+  }
+
+  .kit-ia .reference-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .kit-ia .reference-card {
+    border: 1px solid var(--kit-line);
+    border-radius: 16px;
+    padding: 20px;
+    background: linear-gradient(180deg, var(--kit-paper), var(--kit-paper-2));
+    min-height: 238px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--kit-shadow-sm);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .kit-ia .reference-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 4px;
+    background: linear-gradient(90deg, var(--kit-risk), var(--kit-accent2), var(--kit-accent));
+  }
+
+  .kit-ia .reference-card.featured::before { height: 6px; background: linear-gradient(90deg, var(--kit-ok), var(--kit-accent)); }
+
+  .kit-ia .reference-card.prompt-spotlight {
+    grid-column: span 2;
+    border-color: oklch(72% 0.17 145 / .32);
+    background:
+      radial-gradient(circle at 88% 16%, oklch(72% 0.17 145 / .12), transparent 18rem),
+      linear-gradient(180deg, var(--kit-paper), var(--kit-paper-2));
+    box-shadow: 0 18px 38px oklch(13% 0.06 215 / .3);
+  }
+
+  .kit-ia .reference-card.prompt-spotlight h4 { font-size: 1.18rem; }
+  .kit-ia .reference-card.prompt-spotlight .card-link { background: oklch(72% 0.17 145 / .15); color: var(--kit-ok); }
+
+  .kit-ia .reference-card h4 { margin: 10px 0 8px; font-size: 1.02rem; color: var(--kit-ink); }
+  .kit-ia .reference-card p { color: var(--kit-muted); font-size: .9rem; line-height: 1.55; flex: 1; }
+
+  .kit-ia .reference-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--kit-line);
+  }
+
+  .kit-ia .update-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .kit-ia .update-item {
+    border-left: 5px solid var(--kit-accent);
+    border-radius: 12px;
+    background: var(--kit-bg);
+    padding: 16px;
+  }
+
+  .kit-ia .update-item strong { display: block; margin-bottom: 4px; color: var(--kit-ink); }
+  .kit-ia .update-item p { color: var(--kit-muted); }
+
+  .kit-ia .resource-table-wrap {
+    margin: 18px 0 28px;
+    border: 1px solid var(--kit-line);
+    border-radius: 16px;
+    overflow-x: auto;
+    background: var(--kit-paper);
+    box-shadow: var(--kit-shadow-sm);
+  }
+
+  .kit-ia .resource-table {
+    width: 100%;
+    min-width: 820px;
+    border-collapse: collapse;
+    margin: 0;
+    border: 0;
+  }
+
+  .kit-ia .resource-table th,
+  .kit-ia .resource-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--kit-line);
+    text-align: left;
+    vertical-align: top;
+    font-size: .9rem;
+    color: var(--kit-ink);
+  }
+
+  .kit-ia .resource-table th {
+    background: var(--kit-bg);
+    color: var(--kit-accent);
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+
+  .kit-ia .resource-table tr:last-child td { border-bottom: 0; }
+  .kit-ia .resource-table td:nth-child(2) { color: var(--kit-muted); }
+
+  .kit-ia details.spoiler {
+    border: 1px solid var(--kit-line);
+    border-radius: 14px;
+    background: var(--kit-paper);
+    margin: 12px 0;
+    overflow: hidden;
+  }
+
+  .kit-ia details.spoiler summary {
+    cursor: pointer;
+    padding: 16px 18px;
+    font-weight: 900;
+    color: var(--kit-ink);
+    list-style: none;
+  }
+
+  .kit-ia details.spoiler summary::-webkit-details-marker { display: none; }
+
+  .kit-ia details.spoiler summary::after {
+    content: "+";
+    float: right;
+    color: var(--kit-accent);
+    font-size: 1.1rem;
+  }
+
+  .kit-ia details.spoiler[open] summary::after { content: "-"; }
+
+  .kit-ia .spoiler-body {
+    padding: 0 18px 18px;
+    color: var(--kit-muted);
+  }
+
+  .kit-ia .footer-bottom {
+    text-align: center;
+    padding: 24px 0 8px;
+    font-size: 0.78rem;
+    color: var(--kit-muted);
+    border-top: 1px solid var(--kit-line);
+    margin-top: 24px;
+  }
+
+  .kit-ia .footer-bottom p { margin-bottom: 6px; }
+
+  .kit-ia a { color: inherit; }
+
+  .kit-ia section ul { color: var(--kit-muted); }
+  .kit-ia section ul li { margin-bottom: 6px; }
+
+  @media (max-width: 900px) {
+    .kit-ia .kit-page { padding: 14px 0; }
+    .kit-ia .kit-header { min-height: auto; padding: 32px 24px; }
+    .kit-ia section { padding: 22px; }
+    .kit-ia .grid-2, .kit-ia .grid-3, .kit-ia .grid-4 { grid-template-columns: 1fr; }
+    .kit-ia .kit-nav { position: static; gap: 4px; }
+    .kit-ia .nav-search { width: 100%; margin: 8px 0; }
+    .kit-ia .reference-hero,
+    .kit-ia .reference-grid,
+    .kit-ia .update-list,
+    .kit-ia .org-branch,
+    .kit-ia .metric-strip,
+    .kit-ia .author-links { grid-template-columns: 1fr; }
+    .kit-ia .reference-card.prompt-spotlight { grid-column: auto; }
+  }
+</style>
+
+<script is:inline>
+  function switchTab(event, tabId) {
+    document.querySelectorAll('.kit-ia .tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.kit-ia .tab-content').forEach(content => content.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput && searchInput.value.trim() !== '') {
+      searchInput.value = '';
+      filterContent();
+    }
+  }
+
+  function toggleAccordion(button) {
+    const accordion = button.parentElement;
+    accordion.classList.toggle('open');
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const checkboxes = document.querySelectorAll('.kit-ia .check-label input[type="checkbox"]');
+    checkboxes.forEach(chk => {
+      const isChecked = localStorage.getItem(chk.id) === 'true';
+      chk.checked = isChecked;
+      if (isChecked) {
+        chk.closest('.check-label').classList.add('checked');
+      }
+    });
+  });
+
+  function toggleCheck(checkbox) {
+    const label = checkbox.closest('.check-label');
+    if (checkbox.checked) {
+      label.classList.add('checked');
+    } else {
+      label.classList.remove('checked');
+    }
+    localStorage.setItem(checkbox.id, checkbox.checked);
+  }
+
+  function filterContent() {
+    const query = document.getElementById('searchInput').value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+    const searchables = document.querySelectorAll('.kit-ia .searchable');
+    const tabsContainer = document.querySelector('.kit-ia .tabs-nav');
+    const tabContents = document.querySelectorAll('.kit-ia .tab-content');
+
+    if (query.length === 0) {
+      searchables.forEach(el => { el.style.display = ''; removeHighlights(el); });
+      tabContents.forEach(tc => {
+        if (tc.classList.contains('active')) { tc.style.display = 'block'; } else { tc.style.display = 'none'; }
+      });
+      if (tabsContainer) tabsContainer.style.opacity = '1';
+      return;
+    }
+
+    if (tabsContainer) tabsContainer.style.opacity = '0.5';
+    tabContents.forEach(tc => { tc.style.display = 'block'; });
+
+    searchables.forEach(el => {
+      const text = el.innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (text.includes(query)) { el.style.display = ''; highlightText(el, query); } else { el.style.display = 'none'; }
+    });
+  }
+
+  function highlightText(element, query) {
+    removeHighlights(element);
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+    const nodesToReplace = [];
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      const valNormal = node.nodeValue.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (valNormal.includes(query) && node.parentNode.tagName !== 'MARK' && node.parentNode.tagName !== 'SCRIPT' && node.parentNode.tagName !== 'STYLE' && node.parentNode.tagName !== 'TEXTAREA') {
+        nodesToReplace.push(node);
+      }
+    }
+    nodesToReplace.forEach(node => {
+      const parent = node.parentNode;
+      const text = node.nodeValue;
+      const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+      const parts = text.split(regex);
+      const fragment = document.createDocumentFragment();
+      parts.forEach(part => {
+        const partNormal = part.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        if (partNormal === query) {
+          const mark = document.createElement('mark');
+          mark.className = 'search-highlight';
+          mark.textContent = part;
+          fragment.appendChild(mark);
+        } else {
+          fragment.appendChild(document.createTextNode(part));
+        }
+      });
+      parent.replaceChild(fragment, node);
+    });
+  }
+
+  function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function removeHighlights(element) {
+    const marks = element.querySelectorAll('mark.search-highlight');
+    marks.forEach(mark => {
+      const parent = mark.parentNode;
+      parent.replaceChild(document.createTextNode(mark.textContent), mark);
+      parent.normalize();
+    });
+  }
+</script>

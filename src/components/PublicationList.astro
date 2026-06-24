@@ -1,0 +1,25 @@
+---
+import type { BibliographyItem } from "../data/site";
+
+interface Props {
+  items: BibliographyItem[];
+}
+
+const { items } = Astro.props;
+const formatAuthors = (authors: string) => `${authors.replace(/\.\s*$/, "")}.`;
+---
+
+<ol class="publication-list">
+  {items.map((item) => (
+    <li>
+      <time>{item.year}</time>
+      <div>
+        <p class="citation">
+          <span>{formatAuthors(item.authors)} </span>
+          <a href={item.url} target="_blank" rel="noreferrer">{item.title}</a>
+          <span>. {item.details}</span>
+        </p>
+      </div>
+    </li>
+  ))}
+</ol>

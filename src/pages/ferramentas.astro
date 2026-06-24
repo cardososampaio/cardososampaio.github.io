@@ -1,0 +1,86 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout
+  title="Ferramentas"
+  active="/ferramentas/"
+  description="Ferramentas para pesquisa acadêmica elaboradas por Rafael Sampaio: labia_lex, GPTs e Skills."
+>
+  <main>
+    <PageHero
+      eyebrow="Recursos"
+      title="Ferramentas para pesquisa acadêmica."
+      text="Conjunto de softwares, GPTs e skills desenvolvidos por Rafael Sampaio para apoiar pesquisa, análise de dados qualitativos, escrita e revisão acadêmica."
+    />
+
+    <section class="feature-grid">
+      <article class="feature-card">
+        <h2>labia_lex</h2>
+        <p>
+          Software para análise textual automatizada para todas as áreas de pesquisa e do mercado.
+          Ele é capaz de importar vários formatos de arquivos (pdf, docx, txt, md, csv, xlsx, etc.)
+          simultaneamente, e fazer mais de 20 testes de análise, como bigramas, CHD, Emoções, LDA,
+          Nuvem de palavras, rede de palavras, sentimento, similitude, voyant tools, word tree, yake.
+        </p>
+        <p style="margin-top:14px"><a class="text-link" href="https://osf.io/b7u5x/overview" target="_blank" rel="noopener">Acessar labia_lex →</a></p>
+      </article>
+
+      <article class="feature-card">
+        <h2>Ferramentas para pesquisa acadêmica</h2>
+        <p>
+          Seleção de ferramentas de inteligência artificial para pesquisa acadêmica reunidas pelo
+          LabiiLab, com orientações de uso e recomendações por etapa da pesquisa.
+        </p>
+        <p style="margin-top:14px"><a class="text-link" href="https://labiialab.com.br/selecao-de-ferramentas-de-ia-para-pesquisa-academica-v-1-0/" target="_blank" rel="noopener">Ver seleção →</a></p>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>GPTs<br />(elaborados por Rafael Sampaio)</h2>
+        <p>Assistentes personalizados para etapas da pesquisa acadêmica, disponíveis no ChatGPT.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h2>Escritor Acadêmico</h2>
+          <p>Assistente para escrita acadêmica.</p>
+          <p style="margin-top:14px"><a class="text-link" href="https://chatgpt.com/g/g-68990a2d86a081918e140af5ca2d833b-escritor-academico" target="_blank" rel="noopener">Abrir no ChatGPT →</a></p>
+        </article>
+        <article class="feature-card">
+          <h2>Fichamento Acadêmico</h2>
+          <p>Assistente para fichamento de obras e artigos.</p>
+          <p style="margin-top:14px"><a class="text-link" href="https://chatgpt.com/g/g-76dwRVLdZ-fichamento-academico" target="_blank" rel="noopener">Abrir no ChatGPT →</a></p>
+        </article>
+        <article class="feature-card">
+          <h2>Parecerista Acadêmico</h2>
+          <p>Assistente para elaboração de pareceres e revisão de manuscritos.</p>
+          <p style="margin-top:14px"><a class="text-link" href="https://chatgpt.com/g/g-6880325e2b14819193a8beddae6225e0-parecerista-academico" target="_blank" rel="noopener">Abrir no ChatGPT →</a></p>
+        </article>
+        <article class="feature-card">
+          <h2>Prompts Acadêmicos</h2>
+          <p>Assistente para construção de prompts acadêmicos.</p>
+          <p style="margin-top:14px"><a class="text-link" href="https://chatgpt.com/g/g-69b170eaab108191b6b37ea4316c2386-prompt-academico" target="_blank" rel="noopener">Abrir no ChatGPT →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Skills</h2>
+        <p>Skills desenvolvidas para análise qualitativa e pesquisa assistida por IA.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h2>Análise Temática Reflexiva</h2>
+          <p>
+            Skill desenvolvida pelo professor Rafael Sampaio para análise de dados qualitativos
+            baseado na técnica de análise temática reflexiva de Braun e Clarke.
+          </p>
+          <p style="margin-top:14px"><a class="text-link" href="https://github.com/labiia-lab/analise-tematica-reflexiva" target="_blank" rel="noopener">Ver no GitHub →</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

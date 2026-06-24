@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { teachingThemes } from "../data/site";
+---
+
+<BaseLayout
+  title="Ensino"
+  active="/ensino/"
+  description="Ensino, orientação e formação de pesquisadores em Ciência Política, comunicação política e métodos."
+>
+  <main>
+    <PageHero
+      eyebrow="Formação"
+      title="Ensino para pesquisar problemas públicos com método."
+      text="Rafael Sampaio é professor do Departamento de Ciência Política da UFPE, do Programa de Pós-graduação em Ciência Política da UFPE e do Programa de Pós-graduação em Ciência Política da UFPR."
+    />
+
+    <section class="split-grid">
+      <div>
+        <h2>Temas de docência</h2>
+        <p class="body-copy">
+          Professor concursado há mais de uma década, Rafael atua na formação de estudantes de
+          graduação, pós-graduação e pesquisadores em métodos, política digital, comunicação
+          política e inteligência artificial.
+        </p>
+      </div>
+      <ul class="list-clean">
+        {teachingThemes.map((theme) => <li>{theme}</li>)}
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Orientação acadêmica.</h2>
+        <p>
+          Segundo o currículo Lattes, Rafael registra 14 dissertações de mestrado e 4 teses de
+          doutorado concluídas como orientador principal.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h2>Orientação</h2>
+          <p>Rafael orienta trabalhos sobre democracia digital, redes sociais, YouTube, desinformação, campanhas, consultas públicas, IA e participação política.</p>
+        </article>
+        <article class="feature-card">
+          <h2>Materiais abertos</h2>
+          <p>Seus livros e manuais conectam pesquisa acadêmica, formação metodológica e uso responsável de tecnologias digitais.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
