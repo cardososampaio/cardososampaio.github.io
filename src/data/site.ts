@@ -10,6 +10,8 @@ export const profile = {
   orcidUrl: "http://orcid.org/0000-0001-5176-173X",
   xUrl: "https://x.com/cardososampaio",
   linkedinUrl: "https://www.linkedin.com/in/rafael-cardoso-sampaio-4a8b3822/",
+  youtubeUrl: "https://www.youtube.com/@ProfessorRafaelSampaio",
+  substackUrl: "https://substack.com/@cardososampaio",
 };
 
 export const navItems = [

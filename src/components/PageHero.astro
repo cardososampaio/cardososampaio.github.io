@@ -3,12 +3,13 @@ interface Props {
   eyebrow: string;
   title: string;
   text: string;
+  className?: string;
 }
 
-const { eyebrow, title, text } = Astro.props;
+const { eyebrow, title, text, className = "" } = Astro.props;
 ---
 
-<section class="page-hero">
+<section class={`page-hero ${className}`.trim()}>
   <p class="eyebrow">{eyebrow}</p>
   <h1>{title}</h1>
   <p>{text}</p>
