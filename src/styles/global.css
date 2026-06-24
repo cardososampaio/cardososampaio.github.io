@@ -652,40 +652,33 @@ h1 {
 
 .contact-links {
   display: grid;
-  gap: 18px;
+  gap: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.contact-links div {
-  display: grid;
-  gap: 8px;
-  padding-bottom: 16px;
+.contact-links li {
+  padding: 16px 0;
   border-bottom: 1px solid var(--line);
 }
 
-.contact-links div:last-child {
+.contact-links li:first-child {
+  padding-top: 0;
+}
+
+.contact-links li:last-child {
   padding-bottom: 0;
   border-bottom: 0;
 }
 
-.contact-links dt {
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-.contact-links dd {
-  margin: 0;
+.contact-links a {
   font-size: clamp(19px, 2vw, 27px);
   line-height: 1.25;
-}
-
-.contact-links a {
   overflow-wrap: anywhere;
 }
 
-.contact-links-compact dd {
+.contact-links-compact a {
   font-size: clamp(16px, 1.5vw, 19px);
 }
 
